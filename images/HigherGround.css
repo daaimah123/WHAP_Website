@@ -26,7 +26,7 @@ a, a:visited {
 	text-decoration: none;
 }
 a:hover {
-	color: rgb(86, 0, 157);
+	color: #88ac0b;
 	background: inherit;
 	text-decoration: underline;
 }
@@ -43,7 +43,7 @@ h1 {
 h2 {
 	font-size: 130%;
 	text-transform: uppercase;
-	color: rgb(86, 0, 157);
+	color: #88ac0b;
 }
 h3 {
 	font-size: 130%;	
@@ -79,7 +79,7 @@ code {
   	overflow: auto;  
   	font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace ;
   	/* white-space: pre; */
-  	background: url(image1.jpg);
+  	background: url(post.jpg);
 	border: 1px solid #E0DBC9;  
 }
 acronym {
@@ -89,7 +89,7 @@ acronym {
 blockquote {
 	margin: 10px;
  	padding: 0 0 0 25px;  
-   background: url(image2.jpg);
+   background: url(post.jpg);
 	border: 1px solid #E0DBC9;
 	font: bold 1.3em/1.5em 'Trebuchet MS', Tahoma, Sans-serif;
 	color: #A89A6A;
@@ -105,7 +105,7 @@ th strong {
 	color: #fff;
 }
 th {
-	background: rgb(86, 0, 157) url(image3.jpg) repeat-x;
+	background: #93BC0C url(nav.jpg) repeat-x;
 	height: 29px;
 	padding-left: 12px;
 	padding-right: 12px;
@@ -166,7 +166,7 @@ input.button {
 	margin: 0;
 	padding: 2px 3px; 
 	color: #FFF;
-	background: rgb(86, 0, 157) url(image4.jpg) repeat-x 0 0;
+	background: #8EB50C url(nav.jpg) repeat-x 0 0;
 	border: none;
 }
 
@@ -193,14 +193,13 @@ input.button {
 	vertical-align: top;
 }
 
-
 /********************************************
    LAYOUT
 ********************************************/ 
 #wrap {
 	position: relative;
 	width: 820px;
-	background: #CCC url(image5.jpg) repeat-y center top;
+	background: #CCC url(content.jpg) repeat-y center top;
 	margin: 0 auto;
 	text-align: left;
 }
@@ -208,7 +207,7 @@ input.button {
    position: absolute;
 	width: 820px;
 	height: 19px;
-	background: #CCC url(image6.jpg) repeat-y center top;	
+	background: #CCC url(top-bg.jpg) repeat-y center top;	
 	top: 0; left: 0;
 	z-index: 2;	
 }
@@ -222,13 +221,13 @@ input.button {
 	border-top: 5px solid #FFF;
 	border-bottom: 2px solid #D0D0D0;
 	margin-left: 15px;	
-	/* display: inline; */
+	display: inline;
 }
 #header {
 	width: 820px;
 	position: relative;
 	height: 100px;
-	background: #CCC url(image7.jpg) repeat-y center top;
+	background: #CCC url(header-bg.jpg) repeat-y center top;
 	padding: 0;	
 	color: #FFF;	
 }
@@ -281,14 +280,14 @@ input.button {
 	height: 200px;
 	width: 790px;
 	margin: 0 auto;
-	background: #FFF url(image8.jpg) no-repeat center center;
+	background: #FFF url(header-photo.jpg) no-repeat center center;
 }
 #header-photo-about {
 	clear: both;
 	height: 200px;
 	width: 790px;
 	margin: 0 auto;
-	background: #FFF url(image9.jpg) no-repeat center center;
+	background: #FFF url(header-photo-about.jpg) no-repeat center center;
 }
 
 #header-photo-edu{
@@ -296,7 +295,7 @@ input.button {
 	height: 200px;
 	width: 790px;
 	margin: 0 auto;
-	background: #FFF url(image10.jpg) no-repeat center center;
+	background: #FFF url(header-photo-edu.jpg) no-repeat center center;
 }
 /* Navigation */
 #nav {
@@ -306,12 +305,12 @@ input.button {
 #nav ul {
 	float: left;
 	list-style: none;
-	background: url(image11.jpg) repeat-x;	
+	background: url(nav.jpg) repeat-x;	
 	width: 790px;		
 	text-transform: uppercase;
 	margin: 0 0 0 15px;
 	padding: 0;	
-	/* display: inline; */
+	display: inline;
 }
 #nav ul li {
 	display: inline;
@@ -323,8 +322,8 @@ input.button {
 	width: auto;
 	margin: 0;
 	padding: 0 14px;
-	border-right: 1px solid rgb(86, 0, 157);
-	border-left: 1px solid rgb(103, 6, 184);
+	border-right: 1px solid #899D00;
+	border-left: 1px solid #A7D101;
 	border-bottom: none;
 	color: #FFF;
 	font: bold 13px/2.8em "Century Gothic", "Trebuchet MS", Helvetica, Arial, Geneva, sans-serif;
@@ -332,15 +331,12 @@ input.button {
 	text-decoration: none;	
 	letter-spacing: 1px;
 }
-#nav ul li a:hover {
-  	background: url(image12.jpg) repeat-x
-    /* opacity: 0.5; */
-}
+#nav ul li a:hover, 
 #nav ul li a:active {
-	background: url(image12.jpg) repeat-x;	
+	background: url(nav-hover.jpg) repeat-x;	
 }
 #nav ul li#current a {	
-	background: url(image13.jpg) repeat-x;	
+	background: url(nav-current.jpg) repeat-x;	
 }
 
 /* Main Column */
@@ -348,20 +344,20 @@ input.button {
 	float: left;
 	width: 67%;
 	padding: 0; margin: 10px 0 0 10px;
-	/* display: inline; */
+	display: inline;
 }
 #main h1 {
 	margin-top: 10px;
 	font: normal 1.6em 'Trebuchet MS', Tahoma, Sans-serif;
-	color: rgb(86, 0, 157); 
+	color: #8C9F0D; 
 	padding: 5px 0 5px 5px; 		
 }
 #main ul li {
-	list-style-image: url(image14.gif);
+	list-style-image: url(bullet.gif);
 }
 
 .post-footer {
-	background: url(image15.jpg);
+	background: url(post.jpg);
 	padding: 5px; margin: 20px 10px 0 10px;	
 	font-size: 95%;	
 	color: #AEA471;
@@ -387,17 +383,17 @@ input.button {
 	margin-top: 10px;
 	padding: 5px 5px; 
 	font: bold 1.4em 'Trebuchet MS', Tahoma, Sans-serif;
-	color: rgb(84, 26, 150); 		
+	color: #8C9F0D; 		
 }
 #sidebar ul.sidemenu {
 	text-align: left;
 	margin: 7px 4px 8px 0; padding: 0;
 	text-decoration: none;		
-	background: url(image16.jpg) repeat-x left top;
+	background: url(dots.jpg) repeat-x left top;
 }
 #sidebar ul.sidemenu li {
 	list-style: none;
-	background: url(image17.jpg) repeat-x left bottom;
+	background: url(dots.jpg) repeat-x left bottom;
 	padding: 4px 0 4px 5px;
 	margin: 0 2px;		
 }
@@ -420,7 +416,7 @@ input.button {
 	font-size: 95%;	
 	text-align: left;
 	padding: 15px 0;
-	background: url(image18.jpg) no-repeat center bottom;	
+	background: url(footer-bottom.jpg) no-repeat center bottom;	
 }
 #footer-wrap a {
 	text-decoration: none;
@@ -449,10 +445,10 @@ input.button {
 	list-style: none;
 	margin: 10px 0 0 0; 
 	padding: 0;	
-	background: url(image19.jpg) repeat-x left top;
+	background: url(footer-dots.jpg) repeat-x left top;
 }
 #footer-columns li {
-	background: url(image20.jpg) repeat-x left bottom;		
+	background: url(footer-dots.jpg) repeat-x left bottom;		
 }
 #footer-columns li a {
 	display: block;
