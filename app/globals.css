@@ -1,0 +1,660 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-playfair: "Playfair Display", serif;
+  --whap-gold: rgb(166, 140, 0);
+  --whap-gold-bright: rgb(255, 215, 0);
+  --whap-gold-light: rgba(255, 215, 0, 0.15);
+  --whap-gold-medium: rgba(166, 140, 0, 0.3);
+  --whap-gold-dark: rgba(166, 140, 0, 0.8);
+  --whap-bg-light: rgb(246, 246, 246);
+  --whap-bg-white: rgb(255, 255, 255);
+  --whap-text-dark: #333333;
+  --whap-text-gray: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  color: var(--whap-text-dark);
+  background-color: var(--whap-bg-white);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+/* WHAP Color Classes */
+.text-whap-gold {
+  color: var(--whap-gold);
+}
+
+.text-whap-gold-bright {
+  color: var(--whap-gold-bright);
+}
+
+.bg-whap-gold {
+  background-color: var(--whap-gold);
+}
+
+.bg-whap-gold-bright {
+  background-color: var(--whap-gold-bright);
+}
+
+.bg-whap-gold-light {
+  background-color: var(--whap-gold-light);
+}
+
+.bg-whap-gold-medium {
+  background-color: var(--whap-gold-medium);
+}
+
+.bg-whap-light {
+  background-color: var(--whap-bg-light);
+}
+
+.border-whap-gold {
+  border-color: var(--whap-gold);
+}
+
+.border-whap-gold-bright {
+  border-color: var(--whap-gold-bright);
+}
+
+/* Header Styling */
+.whap-header {
+  background: var(--whap-bg-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid var(--whap-gold);
+}
+
+.whap-logo {
+  color: var(--whap-gold);
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* Navigation */
+.whap-nav-link {
+  color: var(--whap-text-dark);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.whap-nav-link:hover,
+.whap-nav-link.active {
+  color: var(--whap-gold);
+  background-color: var(--whap-bg-light);
+}
+
+/* Page Headers */
+.whap-page-header {
+  background: var(--whap-bg-light);
+  border-bottom: 4px solid var(--whap-gold);
+  padding: 3rem 0;
+}
+
+.whap-page-title {
+  color: var(--whap-gold);
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Section Headers */
+.whap-section-title {
+  color: var(--whap-gold);
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.whap-section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--whap-gold-bright);
+}
+
+/* Cards */
+.whap-card {
+  background: var(--whap-bg-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.whap-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.whap-card-header {
+  color: var(--whap-gold);
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.whap-btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.whap-btn-primary {
+  background: var(--whap-gold-bright);
+  color: var(--whap-text-dark);
+  border-color: var(--whap-gold-bright);
+}
+
+.whap-btn-primary:hover {
+  background: var(--whap-gold);
+  border-color: var(--whap-gold);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.whap-btn-secondary {
+  background: transparent;
+  color: var(--whap-gold);
+  border-color: var(--whap-gold);
+}
+
+.whap-btn-secondary:hover {
+  background: var(--whap-gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.whap-btn-white {
+  background: white;
+  color: var(--whap-gold);
+  border-color: white;
+}
+
+.whap-btn-white:hover {
+  background: var(--whap-bg-light);
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.whap-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+.whap-hero-title {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Mission Section */
+.whap-mission {
+  background: var(--whap-bg-light);
+  padding: 4rem 0;
+}
+
+.whap-mission-content {
+  background: var(--whap-bg-white);
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--whap-gold);
+}
+
+/* Services Grid */
+.whap-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.whap-service-card {
+  background: var(--whap-bg-white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.whap-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: var(--whap-gold);
+}
+
+.whap-service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  filter: sepia(1) hue-rotate(35deg) saturate(2);
+}
+
+.whap-service-title {
+  color: var(--whap-gold);
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Timeline Styling */
+.whap-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.whap-timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--whap-gold);
+  transform: translateX(-50%);
+}
+
+.whap-timeline-item {
+  position: relative;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.whap-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.whap-timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background-color: var(--whap-gold-bright);
+  border: 4px solid white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(166, 140, 0, 0.2);
+}
+
+.whap-timeline-content {
+  position: relative;
+  width: 45%;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--whap-gold);
+}
+
+.whap-timeline-item:nth-child(odd) .whap-timeline-content {
+  margin-left: auto;
+}
+
+.whap-timeline-item:nth-child(even) .whap-timeline-content {
+  margin-right: auto;
+}
+
+.whap-timeline-year {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background-color: var(--whap-gold-bright);
+  color: var(--whap-text-dark);
+  font-weight: 700;
+  border-radius: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.whap-timeline-title {
+  color: var(--whap-gold);
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.whap-timeline-description {
+  color: var(--whap-text-gray);
+  margin-bottom: 1rem;
+}
+
+.whap-timeline-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.whap-timeline-details li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--whap-text-gray);
+}
+
+.whap-timeline-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--whap-gold-bright);
+  font-weight: bold;
+}
+
+/* Stats Section */
+.whap-stats {
+  background: var(--whap-gold);
+  color: white;
+  padding: 3rem 0;
+}
+
+.whap-stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.whap-stat-number {
+  font-family: var(--font-playfair);
+  font-size: 3rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.whap-stat-label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Call to Action */
+.whap-cta {
+  background: var(--whap-gold);
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.whap-cta-title {
+  font-family: var(--font-playfair);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Footer */
+.whap-footer {
+  background: var(--whap-text-dark);
+  color: white;
+  padding: 3rem 0 1rem;
+}
+
+.whap-footer-title {
+  color: var(--whap-gold-bright);
+  font-family: var(--font-playfair);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.whap-footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.whap-footer-link:hover {
+  color: var(--whap-gold-bright);
+}
+
+/* Form Styling */
+.whap-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.whap-form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--whap-text-dark);
+}
+
+.whap-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.whap-form-input:focus {
+  outline: none;
+  border-color: var(--whap-gold);
+  box-shadow: 0 0 0 3px rgba(166, 140, 0, 0.1);
+}
+
+.whap-form-input.error {
+  border-color: var(--whap-gold-bright);
+}
+
+/* Info Boxes */
+.whap-info-box {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: var(--whap-gold-light);
+  border-left: 4px solid var(--whap-gold);
+}
+
+.whap-info-box h4 {
+  color: var(--whap-gold);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.whap-info-box p {
+  color: var(--whap-text-gray);
+}
+
+/* Program Details */
+.whap-program-details {
+  list-style: none;
+  padding-left: 0;
+}
+
+.whap-program-details li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--whap-text-gray);
+}
+
+.whap-program-details li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--whap-gold);
+  font-weight: bold;
+}
+
+/* Enrollment Info */
+.whap-enrollment-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.whap-enrollment-item {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  background-color: var(--whap-gold-light);
+}
+
+.whap-enrollment-item h5 {
+  color: var(--whap-gold);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--whap-gold);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1001;
+  transition: top 0.3s;
+  font-weight: 500;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+body.keyboard-navigation *:focus {
+  outline: 2px solid var(--whap-gold);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--whap-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--whap-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--whap-gold-bright);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .whap-hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+
+  .whap-mission-content {
+    padding: 2rem;
+  }
+
+  .whap-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .whap-service-card {
+    padding: 1.5rem;
+  }
+
+  .whap-timeline-line {
+    left: 30px;
+  }
+
+  .whap-timeline-dot {
+    left: 30px;
+  }
+
+  .whap-timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .whap-header,
+  .whap-footer,
+  .whap-cta {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+  }
+
+  .whap-page-title,
+  .whap-section-title {
+    color: black;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .whap-card {
+    border: 2px solid var(--whap-gold);
+  }
+
+  .whap-btn-primary {
+    border: 2px solid var(--whap-text-dark);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
